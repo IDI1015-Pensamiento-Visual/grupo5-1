@@ -25,3 +25,16 @@ faq.addEventListener('click', event => {
 		question.setAttribute('aria-expanded', 'true')
 	}
 })
+    // Botón caras
+     var boton7 = document.getElementByClass('foto');
+     boton7.addEventListener('click', fun7);
+     boton7.addEventListener('hover', fun8);
+     function fun7() {}
+  
+
+
+     
+    document.querySelector('.image-container').addEventListener('click', function() {
+        this.querySelector('.fotobruno').style.opacity = 1;
+        this.querySelector('.text-overlay').style.opacity = 0;
+      });
