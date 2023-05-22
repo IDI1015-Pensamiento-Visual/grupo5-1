@@ -543,21 +543,19 @@ function obtenerCoordenadas(pais) {
 
 
 //INICIO//
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger); //plataforma externa que permite animación
 
-// const images = gsap.utils.toArray("img");
-
-gsap.utils.toArray("section").forEach((section, index) => {
-  const w = section.querySelector(".images");
-  const [x, xEnd] = [w.scrollWidth * -1, 0];
-  gsap.fromTo(
+gsap.utils.toArray("section").forEach((section, index) => { //seleccionar los elementos html u for each es para iterar cada sección
+  const w = section.querySelector(".images"); //selecciona las imagenes (rosado y blanco)
+  const [x, xEnd] = [w.scrollWidth * -1, 0]; //establece el ancho de la animación
+  gsap.fromTo( //determina rango en el que se hace la animación
     w,
     { x },
     {
       x: xEnd,
-      scrollTrigger: {
+      scrollTrigger: { //controla cuando empieza y termina la animación
         trigger: section,
-        scrub: 1,
+        scrub: 1, //hace el efecto continuo de la animación
       },
     }
   );
@@ -593,10 +591,10 @@ gsap.utils.toArray("section").forEach((section, index) => {
 
     // cajita xd
     
-    const faq = document.querySelector('.faq') //Se selecciona el primer elemento que tiene la clase "faq" en el documento HTML y se guarda en la variable faq.
-    faq.addEventListener('click', event => { //Se agrega un evento de escucha al elemento faq que espera a que se haga clic en él. Cuando se produce el clic, se ejecuta la función de flecha proporcionada.
-      const question = event.target.closest('.faq__question') //Dentro de la función de flecha, se selecciona el elemento más cercano con la clase "faq__question" que es un descendiente del elemento en el que se hizo clic. Se guarda en la variable question.
-      if (!question) return //Si no se encontró ningún elemento con la clase "faq__question" dentro de los descendientes del elemento en el que se hizo clic, se sale de la función.
+    const faq = document.querySelector('.faq') //selecciona el primer elemento que tiene la clase "faq" en el documento HTML y se guarda en la variable faq.
+    faq.addEventListener('click', event => { //Cuando se produce el clic, se ejecuta la función de flecha proporcionada.
+      const question = event.target.closest('.faq__question') //selecciona el elemento más cercano con la clase "faq__question". Se guarda en la variable question.
+      if (!question) return //Si no se encontró ningún elemento con la clase "faq__question", se sale de la función.
       const answer = question.nextElementSibling //Se selecciona el siguiente hermano del elemento question y se guarda en la variable answer. Se asume que este siguiente hermano es la respuesta correspondiente a la pregunta.
       
       // hide previously opened answer and show the clicked answer
