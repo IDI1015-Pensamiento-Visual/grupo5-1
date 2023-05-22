@@ -1,0 +1,540 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#fondoportada{
+    width: 700px;
+    height: 300px;
+    background-image: linear-gradient(to right,#3A86FF,#8338ec,#F40579 ); /* Cambia los colores de inicio y fin según tus preferencias */
+    position: absolute;
+    display: flex;
+    margin-top: 20px;
+    z-index: 9;
+    border-radius: 25px;
+    
+
+}
+
+
+
+#portada h1{
+    color: #FFFFFF;
+    margin-left: 30px;
+    font-size: 50px
+
+}
+
+/*!import le sa prioridad al codigo*/
+.active {
+    color: #FFFFFF!important;
+    font-size: x-large !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.4em;
+    font-weight: bold;
+    
+  }
+
+
+body{
+    font-family: verdana;
+    font-size: larger;
+    background-color: #FFFFFF;
+}
+.wrap{
+    background-color: #FFFFFF;
+    max-height: 100%;
+}
+
+
+ul.tabs{
+    list-style: none;
+    display:flex ;
+    background-color: #464646;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    
+
+}
+
+ul.tabs li{
+    width: 100%;
+}
+
+ul.tabs li a{
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+/*-----------------------------------Secciones y tabs-----------------------------------------*/
+.secciones{
+    width: 100%;
+     
+}
+
+.secciones article{
+    padding: 0px;
+    text-align: justify;
+
+        
+}
+
+
+.secciones article h1{
+    text-align: center;
+     
+}
+
+
+
+/*-------------------------------Mapa, Puntos y Lineas------------------------- */
+#mapa  {
+    color:#BBBBBB !important;
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    height: 670px;
+    z-index: 10;
+}
+
+#contenedor {
+    top: 200px; /* ajusta la posición verticalmente */
+    left: 100px; /* ajusta la posición horizontalmente */
+    z-index: 7;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+  
+
+
+#chart{
+    position: absolute;
+    background-color: transparent;
+    z-index: 5;
+
+    
+}
+
+.lineas{
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+
+
+
+/*-----------------------------------Mapa y Puntos----------------------------- */
+
+/*---------------------------------COLORES DE LOS PUNTOS------------------------*/
+.top{
+    position: absolute !important;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #F40579;
+    margin:5px;
+   
+}
+
+.top::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #F40579;
+    box-shadow: 0 0 0 5px rgba(244, 5, 121, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+
+.mid{
+    position: absolute !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #8338ec;
+    margin:5px;
+   
+}
+
+.mid::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #8338ec;
+    box-shadow: 0 0 0 5px rgba(77, 5, 244, 0.5);
+    display: flex;
+    align-items: center;
+}
+
+.low{
+    position: absolute !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3A86FF;
+    margin:5px;
+   
+}
+
+.low::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #3A86FF;
+    box-shadow: 0 0 0 5px rgba(5, 93, 244, 0.5);
+    display: flex;
+    align-items: center;
+}
+/*---------------------------------COLORES DE LOS PUNTOS------------------------*/
+
+/*---------------------------------COLORES DE LAS ESTRELLAS------------------------*/
+
+
+
+.estrella1 {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #3A86FF;
+  }
+
+
+
+
+.estrella2 {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #8338ec;
+}
+
+.estrella3 {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #F40579;
+}
+
+
+/*---------------------------------COLORES DE LAS ESTRELLAS------------------------*/
+
+
+
+
+/*----------------------------------------Boton---------------------------------- */
+
+.active-button{
+    background-color: #8338ec !important;
+}
+
+.categorias{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 7;
+    margin-left: auto;
+}
+
+
+.icono{
+    width: 30px;
+    align-items: center;
+    line-height: 1 !important;
+}
+
+.categorias button:hover{
+    background-color: #FF69AA;
+}
+
+.categorias button{
+    background-color: #F40579;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 50px;
+    height: 60px !important;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 17PX;
+    margin-left: 1250px;
+
+}
+
+
+.categorias button{
+    height: 30px;
+    width: 100px;
+}
+
+
+/*-------------------------------------------------Boton---------------------------------- */
+
+/*------------------------------------------------DEGRADDO---------------------------------------*/
+.barra {
+    width: 200px;
+    height: 10px;
+    background-image: linear-gradient(to right,#3A86FF,#8338ec,#F40579 ); /* Cambia los colores de inicio y fin según tus preferencias */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 570px;
+    margin-left:650px;
+    border-radius: 50px;
+    z-index: 9;
+}
+
+
+.parada {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3A86FF;
+    position: absolute;
+    margin-top:-57px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+
+
+  }
+  .parada::before{
+    content: attr(data-text);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+
+  }
+  .parada:nth-child(2) {
+    left: 33.33%;
+    background-color: #8338ec;
+  }
+  
+  .parada:nth-child(3) {
+    left: 66.67%;
+    background-color: #F40579;
+  }
+
+/*------------------------------DEGRADDO----------------------*/
+
+.mapa-mundi{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    align-content: center;
+    z-index: 1;
+    
+}
+
+/*-------------------------------INICIO------------------------- */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Euclid Circular A", "Poppins";
+  }
+  
+  .banner {
+    position: relative;
+  }
+  
+  .banner > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    width: 100%;
+    padding: 0 10%;
+    background: rgb(0 0 0 / 30%);
+  }
+  
+  .banner > header img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .banner h2 {
+    margin: 0 0 10px;
+    font-size: 60px;
+    color: rgb(255 255 255 / 80%);
+  }
+  
+  .banner h3 {
+    margin: 0;
+    font-size: 40px;
+    color: rgb(255 255 255 / 60%);
+  }
+  
+  main {
+    padding: 50px 10%;
+    font-size: 30px;
+  }
+  
+  main p {
+    margin: 0 0 60px;
+    opacity: 0.6;
+    line-height: 1.5;
+  }
+  
+  .images {
+    display: flex;
+  }
+  
+  .images > img {
+    flex-shrink: 0;
+    width: 65vw;
+    height: auto;
+    filter: grayscale(0);
+  }
+  
+/*-------------------------------NOSOTROS------------------------- */
+  
+/*------------------------------caraS------------------------- */
+.image-container {
+  position: relative;
+  display: inline-block;
+  transition: opacity 0.5s ease, border-color 0.5s ease;
+  border: 5px solid #F40579;
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-left: 0.1%;
+}
+
+.fade-image {
+  width: 300px;
+  height: auto;
+  transition: opacity 0.5s ease;
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 255);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 50%;
+  
+}
+/*-------------------------------cajita------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+.faq {
+	max-width: 100%;
+  max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+  color: #ffffff;
+	background-color: #F40579;
+	padding: 16px;
+	border-radius: 8px;
+  align-items: center;
+  margin: 10%;
+  margin-bottom: 10%;
+}
+.faq__title {
+  color: #ffffff;;
+	margin-bottom: 20px;
+}
+.faq__separator {
+	border: 1px solid rgb(219 222 225 / 15%);
+	border-bottom: none;
+}
+.faq__item {
+	border-radius: 8px;
+	transition: background-color 0.25s;
+}
+.faq__item:hover,
+.faq__item:focus,
+.faq__item--expanded {
+	background-color: #ffffff81;
+}
+.faq__question {
+	position: relative;
+	display: block;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+	width: 100%;
+	color: #ffffff;
+	font: inherit;
+	font-weight: bold;
+	text-align: left;
+	padding: 16px 48px;
+}
+.faq__icon {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: translateY(-50%);
+	font-size: 24px;
+	transition: transform 0.25s;
+}
+.faq__question[aria-expanded='true'] .faq__icon {
+	transform: translateY(-50%) rotate(90deg);
+}
+.faq__answer {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.25s;
+}
+.faq__answer[aria-hidden='false'] {
+	grid-template-rows: 1fr;
+}
+.faq__answer-inner {
+	overflow: hidden;
+}
+.faq__answer-text {
+	padding: 0 16px 16px;
+}
+
